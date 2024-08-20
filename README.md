@@ -82,15 +82,14 @@ Remote backends store Terraform state files remotely (e.g., in S3, Azure Blob St
 5. **Apply:** Apply the configuration with `terraform apply`.
 6. **Manage:** Use Terraform commands to manage and update your infrastructure.
 
-## Terraform Lifecycle
+# Terraform Lifecycle
 
-Terraform is an Infrastructure as Code (IaC) tool that helps you define and provision infrastructure using a declarative configuration language. Understanding the Terraform lifecycle is essential for effectively managing infrastructure with Terraform.
+**Terraform is an Infrastructure as Code (IaC) tool that helps you define and provision infrastructure using a declarative configuration language. Understanding the Terraform lifecycle is essential for effectively managing infrastructure with Terraform.**
 
 ### 1. Initialization
 
 Before you start using Terraform, you need to initialize your working directory. This step sets up the backend and downloads the necessary provider plugins.
 
-- **Command:**
   ` terraform init`
 
 ## Description:
@@ -99,15 +98,15 @@ Before you start using Terraform, you need to initialize your working directory.
 - Downloads provider plugins.
 - Sets up the backend for storing the state file.
 
-### 2. **Validation**
+### 2. Validation
 Ensure that your configuration files are syntactically valid and internally consistent.
 
 `terraform validate`
 
-Description:
+## Description:
 
-Validates the configuration files.
-Checks for syntax errors and configuration issues.
+- Validates the configuration files.
+- Checks for syntax errors and configuration issues.
 
 
 ### 3. **Planning**
@@ -115,11 +114,11 @@ Generate an execution plan to preview the changes Terraform will make to your in
 
 `terraform plan`
 
-Description:
+## Description:
 
-Creates an execution plan.
-Shows what changes will be made to reach the desired state.
-Helps identify potential issues before applying changes.
+- Creates an execution plan.
+- Shows what changes will be made to reach the desired state.
+- Helps identify potential issues before applying changes.
 
 
 ### 4. **Applying**
@@ -127,113 +126,93 @@ Apply the changes required to reach the desired state of the configuration. This
 
 ```terraform apply```
 
-Description:
+## Description:
 
-Applies the changes required to reach the desired state.
-Provisions or updates the infrastructure.
-Requires confirmation unless -auto-approve is used.
+- Applies the changes required to reach the desired state.
+- Provisions or updates the infrastructure.
+- Requires confirmation unless **-auto-approve** is used.
 
 
-### 5. **Destroying
+### 5. **Destroying**
 Remove all resources defined in the configuration. This step is used when you want to tear down the entire infrastructure.
 
 ```terraform destroy ```
 
-Description:
+## Description:
 
-Destroys all resources defined in the configuration.
-Cleans up the infrastructure.
+- Destroys all resources defined in the configuration.
+- Cleans up the infrastructure.
 
-### 6. **State Management
+### 6. **State Management**
 Terraform maintains a state file to track the current state of your infrastructure. You can manage the state using various commands.
 
-View State:
-
+**View State:**
 ```terraform show ```
 
-Description:
+## Description:
+- Displays the current state or a resource’s state.
 
-### Displays the current state or a resource’s state.
-
-List Resources:
-
+**List Resources:**
 ``` terraform state list```
 
-Description:
-
-Lists all resources in the state file.
-
+## Description:
+- Lists all resources in the state file.
 
 ### Remove Resource from State:
-
 ``` terraform state rm <resource_address>```
 
-Description:
-
-Removes a resource from the state file without destroying it.
+## Description:
+- Removes a resource from the state file without destroying it.
 
 ### 7. **Provisioning Resources
 Use the following commands to manage and manipulate resources:
 
-Refresh State:
-
+**Refresh State:**
 ```terraform refresh```
 
-Description:
+## Description:
+- Updates the state file with the latest resource information.
 
-Updates the state file with the latest resource information.
-
-
-Import Resources:
-
+**Import Resources:**
 ```terraform import <resource_address> <resource_id>```
 
-Description:
-
-Imports existing resources into Terraform’s management.
+## Description:
+- Imports existing resources into Terraform’s management.
 
 ### 8. **Working with Modules
-Modules are reusable components that encapsulate related resources. You can use and manage modules using the following commands:
+- Modules are reusable components that encapsulate related resources. You can use and manage modules using the following commands:
 
-Get Modules:
-
+## Get Modules:
 ```terraform get ```
 
-Description:
-
-Downloads and updates modules used in the configuration.
+## Description:
+- Downloads and updates modules used in the configuration.
 
 Module Graph:
-
 ```terraform graph```
 
-Description:
-
-Generates a visual representation of the dependency graph.
+## Description:
+- Generates a visual representation of the dependency graph.
 
 ==========================================================================
 
 # Example Workflow
+
 Here’s an example workflow to manage your infrastructure with Terraform:
 
-Initialize the working directory:
-
+### Initialize the working directory: 
 ```terraform init```
 
-Validate the configuration:
-
+### Validate the configuration:
 ```terraform validate```
 
-Plan the changes:
-
+### Plan the changes:
 ```terraform plan```
 
-Apply the changes:
-
+### Apply the changes:
 ```terraform apply```
 
-Destroy the resources (if needed):
-
+### Destroy the resources (if needed):
 ```terraform destroy```
 
 # Summary of the Workflow
