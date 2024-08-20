@@ -91,7 +91,7 @@ Terraform is an Infrastructure as Code (IaC) tool that helps you define and prov
 Before you start using Terraform, you need to initialize your working directory. This step sets up the backend and downloads the necessary provider plugins.
 
 - **Command:**
-  ``` terraform init```
+  ` terraform init`
 
 ## Description:
 
@@ -102,7 +102,7 @@ Before you start using Terraform, you need to initialize your working directory.
 ### 2. **Validation**
 Ensure that your configuration files are syntactically valid and internally consistent.
 
-``` terraform validate```
+`terraform validate`
 
 Description:
 
@@ -113,7 +113,7 @@ Checks for syntax errors and configuration issues.
 ### 3. **Planning**
 Generate an execution plan to preview the changes Terraform will make to your infrastructure. This step helps you review and understand the impact of your changes before applying them.
 
-```terraform plan```
+`terraform plan`
 
 Description:
 
@@ -212,7 +212,8 @@ Description:
 Generates a visual representation of the dependency graph.
 
 ==========================================================================
-Example Workflow
+
+# Example Workflow
 Here’s an example workflow to manage your infrastructure with Terraform:
 
 Initialize the working directory:
