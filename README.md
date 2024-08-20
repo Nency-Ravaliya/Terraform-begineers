@@ -22,6 +22,7 @@ Version Control: Configuration files can be stored in version control systems (l
 
 Providers are plugins that allow Terraform to interact with different cloud providers and services.
 Examples: AWS, Azure, Google Cloud, Docker, etc.
+
 ## Resources:
 
 Resources represent the infrastructure components that you want to create, such as virtual machines, networks, or databases.
@@ -102,7 +103,7 @@ terraform init
 - Downloads provider plugins.
 - Sets up the backend for storing the state file.
 
-2. Validation
+### 2. **Validation
 Ensure that your configuration files are syntactically valid and internally consistent.
 
 ```
@@ -115,7 +116,7 @@ Validates the configuration files.
 Checks for syntax errors and configuration issues.
 
 
-3. Planning
+### 3. **Planning
 Generate an execution plan to preview the changes Terraform will make to your infrastructure. This step helps you review and understand the impact of your changes before applying them.
 
 ```
@@ -129,7 +130,7 @@ Shows what changes will be made to reach the desired state.
 Helps identify potential issues before applying changes.
 
 
-4. Applying
+### 4. **Applying
 Apply the changes required to reach the desired state of the configuration. This step provisions or updates the infrastructure as defined in your configuration files.
 
 ```
@@ -142,7 +143,7 @@ Provisions or updates the infrastructure.
 Requires confirmation unless -auto-approve is used.
 
 
-5. Destroying
+### 5. **Destroying
 Remove all resources defined in the configuration. This step is used when you want to tear down the entire infrastructure.
 
 ```
@@ -154,7 +155,7 @@ Description:
 Destroys all resources defined in the configuration.
 Cleans up the infrastructure.
 
-6. State Management
+### 6. **State Management
 Terraform maintains a state file to track the current state of your infrastructure. You can manage the state using various commands.
 
 View State:
@@ -165,8 +166,7 @@ terraform show
 
 Description:
 
-Displays the current state or a resource’s state.
-
+### Displays the current state or a resource’s state.
 
 List Resources:
 
@@ -179,7 +179,7 @@ Description:
 Lists all resources in the state file.
 
 
-Remove Resource from State:
+### Remove Resource from State:
 
 ```
 terraform state rm <resource_address>
@@ -189,7 +189,7 @@ Description:
 
 Removes a resource from the state file without destroying it.
 
-7. Provisioning Resources
+### 7. **Provisioning Resources
 Use the following commands to manage and manipulate resources:
 
 Refresh State:
@@ -213,7 +213,7 @@ Description:
 
 Imports existing resources into Terraform’s management.
 
-8. Working with Modules
+### 8. **Working with Modules
 Modules are reusable components that encapsulate related resources. You can use and manage modules using the following commands:
 
 Get Modules:
