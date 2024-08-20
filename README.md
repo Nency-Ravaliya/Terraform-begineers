@@ -91,8 +91,7 @@ Terraform is an Infrastructure as Code (IaC) tool that helps you define and prov
 Before you start using Terraform, you need to initialize your working directory. This step sets up the backend and downloads the necessary provider plugins.
 
 - **Command:**
-  ```sh
-  terraform init
+  ``` terraform init```
 
 ## Description:
 
@@ -100,12 +99,10 @@ Before you start using Terraform, you need to initialize your working directory.
 - Downloads provider plugins.
 - Sets up the backend for storing the state file.
 
-### 2. **Validation
+### 2. **Validation**
 Ensure that your configuration files are syntactically valid and internally consistent.
 
-```
-terraform validate
-```
+``` terraform validate```
 
 Description:
 
@@ -113,12 +110,10 @@ Validates the configuration files.
 Checks for syntax errors and configuration issues.
 
 
-### 3. **Planning
+### 3. **Planning**
 Generate an execution plan to preview the changes Terraform will make to your infrastructure. This step helps you review and understand the impact of your changes before applying them.
 
-```
-terraform plan
-```
+```terraform plan```
 
 Description:
 
@@ -127,12 +122,11 @@ Shows what changes will be made to reach the desired state.
 Helps identify potential issues before applying changes.
 
 
-### 4. **Applying
+### 4. **Applying**
 Apply the changes required to reach the desired state of the configuration. This step provisions or updates the infrastructure as defined in your configuration files.
 
-```
-terraform apply
-```
+```terraform apply```
+
 Description:
 
 Applies the changes required to reach the desired state.
@@ -143,9 +137,7 @@ Requires confirmation unless -auto-approve is used.
 ### 5. **Destroying
 Remove all resources defined in the configuration. This step is used when you want to tear down the entire infrastructure.
 
-```
-terraform destroy
-```
+```terraform destroy ```
 
 Description:
 
@@ -157,9 +149,7 @@ Terraform maintains a state file to track the current state of your infrastructu
 
 View State:
 
-```
-terraform show
-```
+```terraform show ```
 
 Description:
 
@@ -167,9 +157,7 @@ Description:
 
 List Resources:
 
-```
-terraform state list
-```
+``` terraform state list```
 
 Description:
 
@@ -178,9 +166,7 @@ Lists all resources in the state file.
 
 ### Remove Resource from State:
 
-```
-terraform state rm <resource_address>
-```
+``` terraform state rm <resource_address>```
 
 Description:
 
@@ -191,9 +177,7 @@ Use the following commands to manage and manipulate resources:
 
 Refresh State:
 
-```
-terraform refresh
-```
+```terraform refresh```
 
 Description:
 
@@ -202,9 +186,7 @@ Updates the state file with the latest resource information.
 
 Import Resources:
 
-```
-terraform import <resource_address> <resource_id>
-```
+```terraform import <resource_address> <resource_id>```
 
 Description:
 
@@ -215,9 +197,7 @@ Modules are reusable components that encapsulate related resources. You can use 
 
 Get Modules:
 
-```
-terraform get
-```
+```terraform get ```
 
 Description:
 
@@ -225,15 +205,11 @@ Downloads and updates modules used in the configuration.
 
 Module Graph:
 
-```
-terraform graph
-```
+```terraform graph```
 
 Description:
 
 Generates a visual representation of the dependency graph.
-
-
 
 ==========================================================================
 Example Workflow
@@ -241,33 +217,23 @@ Here’s an example workflow to manage your infrastructure with Terraform:
 
 Initialize the working directory:
 
-```
-terraform init
-```
+```terraform init```
 
 Validate the configuration:
 
-```
-terraform validate
-```
+```terraform validate```
 
 Plan the changes:
 
-```
-terraform plan
-```
+```terraform plan```
 
 Apply the changes:
 
-```
-terraform apply
-```
+```terraform apply```
 
 Destroy the resources (if needed):
 
-```
-terraform destroy
-```
+```terraform destroy```
 
 # Summary of the Workflow
 
